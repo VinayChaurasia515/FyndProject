@@ -1,13 +1,10 @@
 const Userservice = require('./user.service')
 const AuthService = require('../auth.service')
 const Mailservice = require('../mail.service')
-//const PasswordEncript=require('./bcrypt.service')
 
 exports.register = function (req, res) {
     console.log('data received  :: ', req.body)
-
-    Userservice.addUser(req.body).then(function () {
-        //  console.log('data received  :: ')
+    Userservice.addUser(req.body).then(() => {
         AuthService.createToken({ email: req.body.email }, function (error, token) {
             if (error) {
                 //remove the user from database and send internal server error
@@ -42,34 +39,34 @@ exports.register = function (req, res) {
             }
 
         })
-
-        // PasswordEncript.encriptPassword(password:req.body.pass).then(function(error,encriptpassord){
-
-        // })
     }, function (error) {
         if (error == 'Duplicate') {
             //  res.send("user already exist") 
             res.status(500).send({
                 error: " Already User Exists"
             })
-
         }
         else {
             res.status(500).send()
-            console.log("ABCDEF", error)
+            console.log("Show 500  Error   :::   ", error)
         }
     })
-
-
-    //   res.send("BMW")
 }
 
 exports.login = function (req, res) {
     console.log('data received for login :: ', req.body)
     Userservice.findUser(req.body).then(function (result) {
         if (result) {
-            res.send({
-                message: "login done"
+            var payload = {
+                email: result.email,
+                role: result.role
+            }
+            AuthService.createToken(payload, function (error, token) {
+                // AuthService.findUser({email:req.body.email})
+                res.set("authtoken", token)
+                res.send({
+                    message: "login done"
+                })
             })
         }
         else {
@@ -77,19 +74,12 @@ exports.login = function (req, res) {
                 message: "Invalid Credencials"
             })
         }
-
-    }, function (error) {
-        //console.log("ABCDEF", error)
+    }, (error) => {
+        console.log("Show 500  Error   :::   ", error)
         res.status(500).send({
             error: "Internal Servers Error"
         })
     })
-}
-
-
-
-exports.allusers = function (req, res) {
-
 }
 
 exports.verify = function (req, res) {
@@ -109,7 +99,5 @@ exports.verify = function (req, res) {
             }
         }
     })
-
-
     Userservice.verifyUser(token)
 }

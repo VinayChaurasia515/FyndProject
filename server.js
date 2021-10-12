@@ -21,27 +21,5 @@ Mongoose.connect(dburl).then(function(){
     console.log('error in connecting to data base in mongodb')
 })
 
-server.set("view engine","ejs")
 server.use(bodyparser.json())
 server.use(routes)
-
-/////////////////////////
-
-/*
-const storage=multer.diskStorage({
-    destination:'./upload/videos',
-    filename:(req,file,cb)=>{
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-    }
-})
-
-const upload=multer({
-    storage:storage
-})
-
-server.post('/addvideo',upload.single('video'),(req,res)=>{
-  //  console.log(req.body)
-    console.log(req.file) 
-})
-
-*/

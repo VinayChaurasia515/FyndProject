@@ -11,7 +11,7 @@ exports.addUser=function(data){
             }
             else{
                 reject()
-            }           
+            }
         },function(error){
             console.log('error in adding user to collection', error)
             if(error.code==11000)
@@ -23,9 +23,9 @@ exports.addUser=function(data){
 exports.findUser=function(data){
     var query={
         email:data.email,
-        password:data.password
+        password:data.password,
+        verified:true
     }
-
     return new Promise(function(resolve,reject){
         //actual logic for login
         userModel.findOne().then(function(result){
@@ -33,6 +33,37 @@ exports.findUser=function(data){
             resolve(result)
         },function(error){
             console.log('error in login to collection', console.error)
+            reject()
+        })
+    })
+}
+
+exports.findUser=function(data){
+    var query={
+        email:data.email,
+        password:data.password
+    }
+    return new Promise(function(resolve,reject){
+        UserModel.findOne(query).then(function(result){
+            console.log("result of find user ", result)
+            resolve(result)
+        },function(error){
+            reject()
+        })
+    })
+}
+
+exports.deleteUser=function(data){
+    return new Promise(function(resolve,reject){
+        var query={
+            email:data.email
+        }
+        UserModel.remove(query).then(function(result){
+            console.log("rusult of removing user from db ", result)
+            resolve()
+        },function(error){
+            console.log("Error of removing user from db ", result)
+            //error()
             reject()
         })
     })
@@ -59,36 +90,4 @@ exports.verifyUser=function(email){
         })
 
     })    
-}
-
-exports.findUser=function(data){
-    var query={
-        email:data.email,
-        password:data.password
-    }
-
-    return new Promise(function(resolve,reject){
-        UserModel.findOne(query).then(function(result){
-            console.log("result of find user ", result)
-            resolve(result)
-        },function(error){
-            reject()
-        })
-    })
-}
-
-exports.deleteUser=function(data){
-    return new Promise(function(resolve,reject){
-        var query={
-            email:data.email
-        }
-        UserModel.remove(query).then(function(result){
-            console.log("rusult of removing user from db ", result)
-            resolve()
-        },function(error){
-            console.log("Error of removing user from db ", result)
-            //error()
-            reject()
-        })
-    })
 }

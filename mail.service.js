@@ -24,8 +24,7 @@ exports.sendVerificationMail= function (email,url){
                     subject : "Verification Account !!", // Subject line
                     text:url,
                     html: `Click here to <a href='${url}'>Verify</a>`, // html body
-                  });
-                
+                  });                
                   
                   if(info.messageId){
                       console.log("Message sent: %s", info.messageId);
@@ -41,15 +40,5 @@ exports.sendVerificationMail= function (email,url){
                 console.log('.....Error in mail sending :: '+error+'............')
                 reject()
             }
-            
-            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-          
-            // Preview only available when sending through an Ethereal account
-         //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-          
-          
-         // main().catch(console.error);
-
     })
 } 

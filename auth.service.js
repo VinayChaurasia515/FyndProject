@@ -14,10 +14,7 @@ exports.createToken=function(payload,callback){
            // console.log('data toke ',token)
             callback(null,token)
         }
-    },{
-
     })
-
 }
 
 exports.verifyToken=function(token,callback){
@@ -30,5 +27,43 @@ exports.verifyToken=function(token,callback){
             callback(null,payload)
         }
     })
+}
 
+exports.isloggedin=function(req,res,next){
+    var token=req.get("authtoken")
+    console.log('Token    :::    ',token)
+    Jwt.verify(token,"mysecretkey",function(error,payload){
+        if(error){
+            res.status(401).send({
+                error:"UnAuthorized"
+            })
+        }
+        else{
+            next()
+        }
+    })
+}
+
+exports.isAdmin=function(req,res,next){
+    var token=req.get("authtoken")
+    Jwt.verify(token,"mysecretkey",function(error,payload){
+        if(error){
+            res.status(401).send({
+                error:"UnAuthorized token"
+            })
+            console.log("error in verify token")
+        }
+        else{
+            if(payload.role=="admin"){
+             next()
+            }
+             else{
+                res.status(401).send({
+                    error:"UnAuthorized admin" 
+                     
+             })
+             console.log("error in admin ")
+        }
+    }
+    })
 }

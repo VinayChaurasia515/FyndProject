@@ -1,0 +1,194 @@
+{
+	"title" : "Keypad Phone",
+		"brand":"IAIR",
+		"price" : 800,
+		"color" : "red",
+		"description" : "IAIR is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "IAIR",
+		"ram":"4MB",
+		"rom":"1KB",
+		"battery":"800 mAh",
+		"rating" : "3",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+{
+	"title" : "Keypad Phone",
+		"brand":"LAVA",
+		"price" : 955,
+		"color" : "white",
+		"description" : "Lava is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "LAVA A1 Josh",
+		"ram":"4MB",
+		"rom":"1KB",
+		"battery":"800 mAh",
+		"rating" : "4.2",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Keypad Phone",
+		"brand":"MICROMAX",
+		"price" : 1289,
+		"color" : "gray",
+		"description" : "Micromax is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Micromax X741",
+		"ram":"32MB",
+		"rom":"32KB",
+		"battery":"1750 mAh",
+		"rating" : "4",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Keypad Phone",
+		"brand":"NOKIA",
+		"price" : 1417,
+		"color" : "blue",
+		"description" : "Nokia is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Nokia 105 DS 2020",
+		"ram":"4MB",
+		"rom":"4KB",
+		"battery":"800 mAh",
+		"rating" : "4.2",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Keypad Phone",
+		"brand":"SAMSUNG",
+		"price" : 1398,
+		"color" : "blue",
+		"description" : "Samsung is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Samsung GURU 1200",
+		"ram":"4MB",
+		"rom":"0KB",
+		"battery":"800 mAh",
+		"rating" : "4.2",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Keypad Phone",
+		"brand":"SAMSUNG",
+		"price" : 1950,
+		"color" : "white",
+		"description" : "Samsung is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Samsung FM PLUS",
+		"ram":"4MB",
+		"rom":"128KB",
+		"battery":"800 mAh",
+		"rating" : "4.2",
+		"material" : "Plastic",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+
+==================================
+{
+	"title" : "Smart Phone",
+		"brand":"realme",
+		"price" : 10999,
+		"color" : "blue",
+		"description" : "Realme Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Realme C25Y",
+		"ram":"4GB",
+		"rom":"128GB",
+		"battery":"5000 mAh",
+		"rating" : "15",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Smart Phone",
+		"brand":"realme",
+		"price" : 10999,
+		"color" : "Cross blue",
+		"description" : "Realme Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Realme C21Y",
+		"ram":"4GB",
+		"rom":"64GB",
+		"battery":"5000 mAh",
+		"rating" : "4.6",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Smart Phone",
+		"brand":"POCO",
+		"price" : 11249,
+		"color" : "Cool blue",
+		"description" : "Poco Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "POCO M3",
+		"ram":"6GB",
+		"rom":"64GB",
+		"battery":"5000 mAh",
+		"rating" : "4.6",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Smart Phone",
+		"brand":"POCO",
+		"price" : 11249,
+		"color" : "Cool blue",
+		"description" : "Poco Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "POCO C31",
+		"ram":"4GB",
+		"rom":"64GB",
+		"battery":"5000 mAh",
+		"rating" : "4.6",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Smart Phone",
+		"brand":"MI",
+		"price" : 9213,
+		"color" : "Carban Black",
+		"description" : "Redmi Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "Redmi 9",
+		"ram":"4GB",
+		"rom":"64GB",
+		"battery":"5000 mAh",
+		"rating" : "4.6",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+{
+	"title" : "Smart Phone",
+		"brand":"MI",
+		"price" : 12990,
+		"color" : "Carban Black",
+		"description" : "Mi Prime is equipped with a tiny punch-hole in-display selfie camera, which is an upgrade from the previous generation Redmi 9 Prime.",
+		"model" : "MI A3",
+		"ram":"4GB",
+		"rom":"64GB",
+		"battery":"5000 mAh",
+		"rating" : "4.6",
+		"material" : "steel",
+		"type" : "simple",
+		"quantity" : 1
+}
+
+
